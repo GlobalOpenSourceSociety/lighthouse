@@ -17,7 +17,10 @@ jest.setTimeout(90_000);
 /**
  * Some audits can be notApplicable based on machine timing information.
  * Exclude these audits from applicability comparisons. */
-const FLAKY_AUDIT_IDS_APPLICABILITY = new Set(['long-tasks']);
+const FLAKY_AUDIT_IDS_APPLICABILITY = new Set([
+  'long-tasks',
+  'screenshot-thumbnails',
+]);
 
 /**
  * @param {LH.Result} lhr
